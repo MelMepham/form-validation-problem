@@ -21,15 +21,12 @@ export class AppComponent implements OnInit {
         password: new FormControl('passworddd', {
             validators: [Validators.minLength(8)]
         }),
-        color: new FormControl('blue', {
+        color: new FormControl('', {
             validators: [Validators.required]
         }),
         animalGroup: new FormGroup({}, {
             validators: [CheckboxLengthValidator(2)]
         }),
-        // Have put a native validator for this in the html
-        // because it needs to be updated dynamically
-        // (not the best idea to be validating in two different places)
         type_of_tiger: new FormControl('')
     });
 
@@ -47,9 +44,16 @@ export class AppComponent implements OnInit {
         if (animal === 'tiger') {
             this.tigerIsClicked = !this.tigerIsClicked;
         }
+
+        if (this.tigerIsClicked) {
+          this.myFunForm.get('type_of_tiger').setValidators([Validators.required]);
+        } else {
+          this.myFunForm.get('type_of_tiger').clearValidators();
+        }
     }
 
     public onSubmit(value): void {
+      // Left a console log in here on purpose
         console.log(value);
     }
 }

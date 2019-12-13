@@ -45,14 +45,16 @@
         </label>
       </ng-container>
     </div>
-    <label
+    <ng-container
       *ngIf="tigerIsClicked">
+    <label>
       <input
         type="text"
-        formControlName="type_of_tiger"
-        [required]="tigerIsClicked">
+        formControlName="type_of_tiger">
       Type of tiger
     </label>
+
+    </ng-container>
     <button
       type="submit"
       [disabled]="!myFunForm.valid">

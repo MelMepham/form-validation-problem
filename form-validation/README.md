@@ -1,27 +1,55 @@
-# FormValidation
+## My cool form project
+Tech test for Springload.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.5.
+This was a really great tech test - so thank you to the people who created it! I had heaps of fun.
 
-## Development server
+### How to get the project started
+* Pull down repo.
+* Run `npm install` (This will install all of the depedencies).
+* To start the server run `ng serve`.
+* Visit [localhost:4200](https://localhost:4200/).
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### How to run the test suite
+* Run `ng test` This will open a new browser with Karma.
 
-## Code scaffolding
+### Personal considerations while I was writing this.
+#### Technology used:
+Angular and Reactive Forms
+* My most confortable framework.
+* Really easy to create an application using `Angular CLI`.
+* I took this as a learning opportunity for myself.
+* Reactive Forms was both a good choice and a bad choice
+> * They are quite heavy, and hold a lot of room for developing and personalised control. I used this to my advantage by creating a custom validator however because the form is quite simple I could have used something better suited to the job.
+> * Positive is if this application was to grow and be form heavy we would have created the base for this.
+> * As I work in Angular I took this as a personal learning opportunity to play around with Reactive Forms.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+SASS
+* I know Springload uses css preprocessors
+* I find it easier to read css when things like `:active`, `:hover` etc are nested in the appropriate class's
+* I re formatted the CSS so that we are not creating global styles for all inputs etc - Global CSS is always a bad smell for me.
+* I also used the BEM naming conventions because I also know ya'll use BEM.
 
-## Build
+Angular probably works as a disadvantage because I know that Springload uses React and I am sure you would have loved to have seen some React code. 
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+The CSS is not as nice as I would have liked. It is however cross-browser compatible and I do believe it would even work on IE 😅😅
 
-## Running unit tests
+#### Accessibility
+* I changed some of the semantic markup up the HTML as some of it was wrong.
+> * There was initially no H2
+> * A form is not a `<p>`
+> * I only showed the `type_of_tiger` if the tiger was selected
+> * Added some helper text with the password and animal checkbox array
+> * Put a disabled state on the button
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+#### Testing
+* I tested the custom validator
+* If I would spend some more time on it I would test the form validation.
 
-## Running end-to-end tests
+#### Progressive Enhancement
+I kept it all browser agnostic and did not add any browser specific ehancements.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+#### Browser support
+All browsers should be consistent. I have done manual testing on all mac browsers and have not used any CSS that is not supported.
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+#### Tooling
+`Angular CLI` - Amazing tool for quick set up of an application.

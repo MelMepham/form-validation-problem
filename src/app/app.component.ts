@@ -21,7 +21,7 @@ export class AppComponent implements OnInit {
     public animalArray = ['tiger', 'snake', 'donkey', 'bear'];
 
     public myFunForm = new FormGroup({
-        email: new FormControl('melissa.mepham@gmail.com', {
+        email: new FormControl('', {
             validators: [Validators.required, Validators.email]
         }),
         password: new FormControl('', {

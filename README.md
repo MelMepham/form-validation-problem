@@ -1,7 +1,9 @@
 ## My cool form project
 Tech test for Springload.
 
-This was a really great tech test - so thank you to the people who created it! I had heaps of fun.
+This was a really great tech test - thank you to the people who created it! I had heaps of fun. I probably spent about 4.5 hours on this.
+
+Also I would love any and all feedback you have for me.
 
 ### How to get the project started
 * Pull down repo.
@@ -15,7 +17,7 @@ This was a really great tech test - so thank you to the people who created it! I
 ### Personal considerations while I was writing this.
 #### Technology used:
 Angular and Reactive Forms
-* My most confortable framework.
+* My most comfortable framework.
 * Really easy to create an application using `Angular CLI`.
 * I took this as a learning opportunity for myself.
 * Reactive Forms was both a good choice and a bad choice
@@ -43,7 +45,7 @@ The CSS is not as nice as I would have liked. It is however cross-browser compat
 
 #### Testing
 * I tested the custom validator
-* If I would spend some more time on it I would test the form validation.
+* If I would spend some more time on it I would test the form itself.
 
 #### Progressive Enhancement
 I kept it all browser agnostic and did not add any browser specific ehancements.

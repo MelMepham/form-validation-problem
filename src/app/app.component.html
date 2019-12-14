@@ -48,7 +48,7 @@
                 Color
             </label>
             <select
-                class="app-root__input"
+                class="app-root__input app-root__input--select"
                 formControlName="color">
                 <option
                     value=""
@@ -84,10 +84,10 @@
                 type="checkbox"
                 [formControlName]='animalArray[i]'>
         </div>
-        <ng-container
+        <div
+            [ngClass]="{'app-root__invalid': type_of_tiger.invalid && type_of_tiger.touched}"
             *ngIf="tigerIsClicked">
             <label
-                [ngClass]="{'app-root__invalid': type_of_tiger.invalid && type_of_tiger.touched}"
                 class="app-root__label">
                 Type of tiger
             </label>
@@ -95,7 +95,7 @@
                 class="app-root__input"
                 type="text"
                 formControlName="type_of_tiger">
-        </ng-container>
+        </div>
     </fieldset>
     <fieldset
         class="app-root__fieldset">

@@ -1,43 +1,55 @@
-# [Form validation problem](https://springload.github.io/form-validation-problem/)
+## My cool form project
+Tech test for Springload.
 
-We've created this problem to evaluate how developers tackle a real-world problem. If you've been assigned this problem you should spend around **2 hours** working on it. The last thing we want you to do is toil away for days on end!
+This was a really great tech test - so thank you to the people who created it! I had heaps of fun.
 
-If you've stumbled across this and want to work at [Springload](https://www.springload.co.nz/) feel free to submit it too. We're always on the lookout for skilled developers.
+### How to get the project started
+* Pull down repo.
+* Run `npm install` (This will install all of the depedencies).
+* To start the server run `ng serve`.
+* Visit [localhost:4200](https://localhost:4200/).
 
-## Problem definition
+### How to run the test suite
+* Run `ng test` This will open a new browser with Karma.
 
-Included in this repository is an [index.html](index.html) file that contains a form. You must ensure all of the following rules are met before the form is posted to the (in this case imaginary) server:
+### Personal considerations while I was writing this.
+#### Technology used:
+Angular and Reactive Forms
+* My most confortable framework.
+* Really easy to create an application using `Angular CLI`.
+* I took this as a learning opportunity for myself.
+* Reactive Forms was both a good choice and a bad choice
+> * They are quite heavy, and hold a lot of room for developing and personalised control. I used this to my advantage by creating a custom validator however because the form is quite simple I could have used something better suited to the job.
+> * Positive is if this application was to grow and be form heavy we would have created the base for this.
+> * As I work in Angular I took this as a personal learning opportunity to play around with Reactive Forms.
 
-* `Email` must be a valid email address.
-* `Password` must be longer than 8 characters.
-* `Colour` must be selected.
-* At least two `Animal`s must be chosen.
-* If `Tiger` is one of the chosen `Animal`s then `Type of tiger` is required to be a non-empty string.
+SASS
+* I know Springload uses css preprocessors
+* I find it easier to read css when things like `:active`, `:hover` etc are nested in the appropriate class's
+* I re formatted the CSS so that we are not creating global styles for all inputs etc - Global CSS is always a bad smell for me.
+* I also used the BEM naming conventions because I also know ya'll use BEM.
 
-## Other requirements
+Angular probably works as a disadvantage because I know that Springload uses React and I am sure you would have loved to have seen some React code. 
 
-If the form is submitted and an error occurs, the error element's parent should have a CSS `error` class added to it.
+The CSS is not as nice as I would have liked. It is however cross-browser compatible and I do believe it would even work on IE 😅😅
 
-```html
-<p class="error">
-    <label for="field"></label>
-    <input id="field" type="text" value="foo">
-</p>
-```
+#### Accessibility
+* I changed some of the semantic markup up the HTML as some of it was wrong.
+> * There was initially no H2
+> * A form is not a `<p>`
+> * I only showed the `type_of_tiger` if the tiger was selected
+> * Added some helper text with the password and animal checkbox array
+> * Put a disabled state on the button
 
-Please write a little bit about the technology you chose and why, including any limitations or possibilities of this approach.
+#### Testing
+* I tested the custom validator
+* If I would spend some more time on it I would test the form validation.
 
-## The cherry on the cake
+#### Progressive Enhancement
+I kept it all browser agnostic and did not add any browser specific ehancements.
 
-Beyond the problem statement, show us the consideration you have given to some or all of the following:
+#### Browser support
+All browsers should be consistent. I have done manual testing on all mac browsers and have not used any CSS that is not supported.
 
-- Documentation
-- Accessibility
-- Progressive enhancement
-- Browser support
-- Testing
-- Tooling
-
-## Submission
-
-Please email us a link to your fork of this repository, or a zip of your solution to `1337h4x0r@springload.co.nz`.
+#### Tooling
+`Angular CLI` - Amazing tool for quick set up of an application.
